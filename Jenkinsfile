@@ -1,19 +1,19 @@
 pipeline{
       agent any
        stages{
-             stage('Build Code')
+             stage('smoke testing')
         {
             steps{
-                sh 'echo "Build Code"'
+                sh 'echo "test Code"'
             }
         }
         
-        stage('Release Code'){
+        stage('Integration testing'){
             steps{
                script {
                    if(params.Release)
                    {
-                        echo "relase the code to artifactory"
+                        echo "test code as integration"
           }
         }
     }
